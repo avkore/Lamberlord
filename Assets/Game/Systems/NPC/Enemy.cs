@@ -4,20 +4,27 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    private Health health;
     private bool isAttacking;
     private bool isRespawning;
     private NavMeshAgent navMeshAgent;
     [SerializeField] private float attackRange = 2f;
-    [SerializeField] private float health = 100f;
     [SerializeField] private float damage = 15f;
     [SerializeField] private float followRange = 100f;
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private Animator characterAnor;
     [SerializeField] private PlayerController player;
 
-    void Start()
+    private void Start()
     {
+        health = GetComponent<Health>();
         navMeshAgent = GetComponent<NavMeshAgent>();
+        HealthBar healthBar = GetComponentInChildren<HealthBar>();
+        
+        if (healthBar != null && health != null)
+        {
+            health.RegisterObserver(healthBar);
+        }
     }
 
     void Update()
@@ -41,7 +48,7 @@ public class Enemy : MonoBehaviour
                 characterAnor.SetBool(Constants.Animation.Booleans.IsWalking, true);
             }
 
-            if (health <= 0f && !isRespawning)
+            if (health.CurrentHealth <= 0f && !isRespawning)
             {
                 isRespawning = true;
                 StartCoroutine(Die());
@@ -59,10 +66,18 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(1f);
         isAttacking = false;
     }
+    
+    public void TakeDamage(float amount)
+    {
+        if (health != null)
+        {
+            health.TakeDamage(amount);
+        }
+    }
 
     IEnumerator Die()
     {
-        Debug.Log("Enemy Died");
+        Debug.Log("Died");
         yield return new WaitForSeconds(0.5f);
         Destroy(this.gameObject, 0.5f);
         StartCoroutine(Respawn());

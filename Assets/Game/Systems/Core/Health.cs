@@ -66,8 +66,7 @@ public class Health : MonoBehaviour
         Killed.Invoke();
         gameObject.SetActive(false);
     }
-
-    // Observer pattern implementation
+    
     private List<IHealthObserver> observers = new List<IHealthObserver>();
 
     public void RegisterObserver(IHealthObserver observer)

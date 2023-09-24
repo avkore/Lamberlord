@@ -206,9 +206,10 @@ GameObject:
   - component: {fileID: 8896929672785310009}
   - component: {fileID: 8896929672785310008}
   - component: {fileID: 5726350797994270078}
+  - component: {fileID: 4924072332601291081}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -295,12 +296,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 1.2
-  health: 100
+  damage: 15
   followRange: 100
   enemyPrefab: {fileID: 8896929672785310006}
   characterAnor: {fileID: 3274249464066565591}
   player: {fileID: 0}
-  healthBar: {fileID: 8896929671839612209}
 --- !u!114 &5726350797994270078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,6 +315,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startingHealth: 100
   _maxHealth: 100
+--- !u!136 &4924072332601291081
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8896929672785310006}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.89771044
+  m_Height: 2.3877256
+  m_Direction: 1
+  m_Center: {x: -0.0015605688, y: -0.00000011920929, z: 0.05400884}
 --- !u!1 &8896929672839415191
 GameObject:
   m_ObjectHideFlags: 0
