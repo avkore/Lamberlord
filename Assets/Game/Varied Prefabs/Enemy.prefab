@@ -271,10 +271,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c342cb44e3278ae42980b97d55535f13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterAnor: {fileID: 3274249464066565591}
-  attackRange: 2
+  attackRange: 1.2
   health: 100
   followRange: 100
+  enemyPrefab: {fileID: 8896929672785310006}
+  characterAnor: {fileID: 3274249464066565591}
   player: {fileID: 0}
   healthBar: {fileID: 8896929671839612209}
 --- !u!195 &8896929672785310009

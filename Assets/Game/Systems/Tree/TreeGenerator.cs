@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class TreeGenerator : MonoBehaviour
 {
-    public GameObject treePrefab;
-    public int numberOfTrees = 100;
-    public float terrainWidth = 100f;
-    public float terrainLength = 100f;
+    [SerializeField] private  GameObject treePrefab;
+    [SerializeField] private  int numberOfTrees = 100;
+    [SerializeField] private  float terrainWidth = 100f;
+    [SerializeField] private  float terrainLength = 100f;
 
     void Start()
     {
