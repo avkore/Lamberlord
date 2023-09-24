@@ -29,7 +29,6 @@ public class Enemy : MonoBehaviour
             
             if (distanceToPlayer <= attackRange)
             {
-                characterAnor.SetBool(Constants.Animation.Booleans.IsWalking, false);
                 AttackPlayer();
             }
         }
@@ -37,8 +36,6 @@ public class Enemy : MonoBehaviour
 
     void AttackPlayer()
     {
-        characterAnor.SetBool(Constants.Animation.Booleans.IsHitting, true);
-        characterAnor.SetBool(Constants.Animation.Booleans.IsHitting, false);
-       //TODO: Attack 
+        //TODO: Attack 
     }
 }

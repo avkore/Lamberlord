@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator characterAnor;
     [SerializeField] private MovementController dMovementController;
     [SerializeField] private HealthBar healthBar;
+    
     private void Update() {
         characterAnor.SetBool(Constants.Animation.Booleans.IsWalking, IsMoving);
     }
