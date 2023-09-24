@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealthBar : MonoBehaviour
+public class HealthBar : MonoBehaviour
 {
    [SerializeField] private Image healthbarSprite;
-   private Camera camera;
+   private new Camera camera;
 
    public void UpdateHealthBar(float maxHealth, float currentHealth)
    {

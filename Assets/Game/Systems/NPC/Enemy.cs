@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -11,13 +9,12 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float health = 100f;
     [SerializeField] private float followRange = 100f;
     [SerializeField] private Transform player;
-    [SerializeField] private PlayerHealthBar healthBar;
+    [SerializeField] private HealthBar healthBar;
 
     void Start()
     {
         healthBar.UpdateHealthBar(health, health);
         navMeshAgent = GetComponent<NavMeshAgent>();
-        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update()
@@ -32,6 +29,7 @@ public class Enemy : MonoBehaviour
             
             if (distanceToPlayer <= attackRange)
             {
+                characterAnor.SetBool(Constants.Animation.Booleans.IsWalking, false);
                 AttackPlayer();
             }
         }
@@ -39,6 +37,8 @@ public class Enemy : MonoBehaviour
 
     void AttackPlayer()
     {
+        characterAnor.SetBool(Constants.Animation.Booleans.IsHitting, true);
+        characterAnor.SetBool(Constants.Animation.Booleans.IsHitting, false);
        //TODO: Attack 
     }
 }

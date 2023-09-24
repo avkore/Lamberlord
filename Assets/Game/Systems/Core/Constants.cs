@@ -12,6 +12,7 @@ public static class Constants
         public static class Booleans
         {
             public static readonly int IsWalking = Animator.StringToHash("IsWalking");
+            public static readonly int IsHitting = Animator.StringToHash("IsHitting");
         }
 
         public static class Floats

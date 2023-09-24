@@ -1062,6 +1062,11 @@ PrefabInstance:
       propertyPath: floatingJoystick
       value: 
       objectReference: {fileID: 650841620}
+    - target: {fileID: 5921901960605463399, guid: 1d6e663369e4dcb41a0eab13cc868b8b,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d6e663369e4dcb41a0eab13cc868b8b, type: 3}
 --- !u!1001 &8896929672932104866
@@ -1081,6 +1086,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1853511219}
+    - target: {fileID: 8896929672785310010, guid: bbfa0e1dd4042734da6787bc52c28b98,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8896929672785310011, guid: bbfa0e1dd4042734da6787bc52c28b98,
         type: 3}
       propertyPath: m_RootOrder
