@@ -8,7 +8,5 @@ public class PlayerController : MonoBehaviour
     
     private void Update() {
         characterAnor.SetBool(Constants.Animation.Booleans.IsWalking, IsMoving);
-		
-        characterAnor.SetFloat(Constants.Animation.Floats.MoveSpeed, Mathf.InverseLerp(0f, 5f, dMovementController.GetRigid.velocity.magnitude) * 1.2f);
     }
 }
