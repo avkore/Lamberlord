@@ -1,20 +1,45 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
+public class HealthBar : MonoBehaviour, IHealthObserver
 {
-   [SerializeField] private Image healthbarSprite;
-   private new Camera camera;
+    [SerializeField] private Image healthbarSprite;
+    private new Camera camera;
 
-   public void UpdateHealthBar(float maxHealth, float currentHealth)
-   {
-      healthbarSprite.fillAmount = currentHealth / maxHealth;
-      camera = Camera.main;
-   }
+    private void Start()
+    {
+        camera = Camera.main;
 
-   private void Update()
-   {
-      transform.rotation = Quaternion.LookRotation(transform.position - camera.transform.position);
-      healthbarSprite.fillAmount = Mathf.MoveTowards(healthbarSprite.fillAmount, 1, 2 * Time.deltaTime);
-   }
+        // Find the Health component on the same GameObject or a parent GameObject
+        Health healthComponent = GetComponentInParent<Health>();
+
+        if (healthComponent != null)
+        {
+            // Register this health bar as an observer
+            healthComponent.RegisterObserver(this);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        // Unregister as an observer when the health bar is destroyed
+        Health healthComponent = GetComponentInParent<Health>();
+
+        if (healthComponent != null)
+        {
+            healthComponent.UnregisterObserver(this);
+        }
+    }
+
+    private void Update()
+    {
+        transform.rotation = Quaternion.LookRotation(transform.position - camera.transform.position);
+    }
+
+    // Implement the IHealthObserver interface
+    public void OnHealthChanged(float currentHealth, float maxHealth)
+    {
+        // Update the health bar fill amount based on current health and max health
+        healthbarSprite.fillAmount = currentHealth / maxHealth;
+    }
 }

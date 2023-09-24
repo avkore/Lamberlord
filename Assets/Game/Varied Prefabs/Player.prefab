@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5921901960605463398}
   - component: {fileID: 5921901960605463397}
   - component: {fileID: 5921901960605463396}
+  - component: {fileID: 743227330686428429}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -103,6 +104,20 @@ MonoBehaviour:
   floatingJoystick: {fileID: 0}
   playerController: {fileID: 5921901960605463397}
   canMove: 0
+--- !u!114 &743227330686428429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5921901960605463392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 593ecd817ca7f6d47aae74d4fed218c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startingHealth: 100
+  _maxHealth: 100
 --- !u!1 &5921901960741729020
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +381,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.534
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -425,6 +440,22 @@ PrefabInstance:
     - target: {fileID: 400010, guid: e16ebd76d5ceffd4ea77091388330041, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400020, guid: e16ebd76d5ceffd4ea77091388330041, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7067728
+      objectReference: {fileID: 0}
+    - target: {fileID: 400020, guid: e16ebd76d5ceffd4ea77091388330041, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.003339073
+      objectReference: {fileID: 0}
+    - target: {fileID: 400070, guid: e16ebd76d5ceffd4ea77091388330041, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7067728
+      objectReference: {fileID: 0}
+    - target: {fileID: 400070, guid: e16ebd76d5ceffd4ea77091388330041, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0033390718
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: e16ebd76d5ceffd4ea77091388330041, type: 3}
       propertyPath: m_Controller

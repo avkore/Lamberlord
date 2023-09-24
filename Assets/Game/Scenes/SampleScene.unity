@@ -617,7 +617,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1853511219}
+      objectReference: {fileID: 1853511223}
     - target: {fileID: 8896929672785310011, guid: bbfa0e1dd4042734da6787bc52c28b98,
         type: 3}
       propertyPath: m_RootOrder
@@ -963,6 +963,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5921901961248613714}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1853511223 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5921901960605463397, guid: 1d6e663369e4dcb41a0eab13cc868b8b,
+    type: 3}
+  m_PrefabInstance: {fileID: 5921901961248613714}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c2d8ee553ce15241b904bb9d0cded1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1900619467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1136,5 +1148,10 @@ PrefabInstance:
       propertyPath: floatingJoystick
       value: 
       objectReference: {fileID: 650841620}
+    - target: {fileID: 5921901961818126120, guid: 1d6e663369e4dcb41a0eab13cc868b8b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d94d610acbaab104a9efdea44c884ae9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d6e663369e4dcb41a0eab13cc868b8b, type: 3}
